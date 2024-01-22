@@ -15,9 +15,9 @@ local Window = Fluent:CreateWindow({
 local Tabs = {
     Main = Window:AddTab({ Title = "Main", Icon = "home" }),
     Setting = Window:AddTab({ Title = "Setting", Icon = "settings" }),
-    Stats = Window:AddTab({ Title = "Stats", Icon = "add" }),
+    Stats = Window:AddTab({ Title = "Stats", Icon = "plus-circle" }),
     Player = Window:AddTab({ Title = "Player", Icon = "baby" }),
-    Teleport = Window:AddTab({ Title = "Island", Icon = "plamtrees" }),
+    Teleport = Window:AddTab({ Title = "Island", Icon = "palmtree" }),
     Fruit = Window:AddTab({ Title = "Fruit", Icon = "apple" }),
     Raid = Window:AddTab({ Title = "Raid", Icon = "swords" }),
     Race = Window:AddTab({ Title = "Race V4", Icon = "chevrons-right" }),
@@ -2527,7 +2527,7 @@ local listfastattack = {'Normal Attack','Fast Attack','Super Fast Attack','Very 
     DropdownDelayAttack:OnChanged(function(Value)
     _G.FastAttackBarber_Mode = Value
 	if _G.FastAttackBarber_Mode == "Fast Attack" then
-		_G.Fast_Delay = 0.10
+		_G.Fast_Delay = 0.5
 	elseif _G.FastAttackBarber_Mode == "Normal Attack" then
 		_G.Fast_Delay = 0.2
 	elseif _G.FastAttackBarber_Mode == "Super Fast Attack" then
@@ -6748,7 +6748,13 @@ Tabs.Shop:AddButton({
 		game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuyGodhuman")
 	end
 })
-
+Tabs.shop:AddButton({
+        Title = "Sanguine Art",
+        Description = "Mua Sanguine Art",
+        Callback = function()
+                game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuySanguineArt")
+	end
+})
 
 local Mastery = Tabs.Shop:AddSection("Misc Items")
 

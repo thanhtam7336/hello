@@ -6755,7 +6755,8 @@ Tabs.shop:AddButton({
         Title = "Sanguine Art",
         Description = "Mua Sanguine Art",
         Callback = function()
-                game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuySanguineArt")
+                game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuySanguineArt",true)
+	        game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuySanguineArt")
 	end
 })
 

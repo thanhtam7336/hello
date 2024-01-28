@@ -14,7 +14,7 @@ local Window = Fluent:CreateWindow({
 })
 local Tabs = {
     Main = Window:AddTab({ Title = "Main", Icon = "" }),
-    + Auto Farm = Window:AddTab({ Title = "Stack Auto Farm", Icon = ""}),
+   Stack Auto Farm = Window:AddTab({ Title = "Stack Auto Farm", Icon = ""}),
     Setting = Window:AddTab({ Title = "Setting", Icon = "" }),
     Stats = Window:AddTab({ Title = "Stats", Icon = "" }),
     Player = Window:AddTab({ Title = "Player", Icon = "" }),
@@ -4640,11 +4640,7 @@ if Second_Sea then
     end
 --------------------------------------------------------------------------------------------------------------------------------------------
 --Stack Auto Farm
-Tabs.Stack Auto Farm:AddButton({
-    Title = "Auto Elite",
-    Description = "Chỉ áp dụng ở sea 3",
-    Callback = function ()
- local AutoElite = Tabs.Stack Auto Farm:AddSection("Elite Hunter Farm")
+local AutoElite = Tabs.Stack Auto Farm:AddSection("Elite Hunter Farm")
 
     local ToggleElite = Tabs.Stack Auto Farm:AddToggle("ToggleElite", {Title = "Auto Elite Hunter",Description = "Đánh Boss Bí Ẩn", Default = false })
 

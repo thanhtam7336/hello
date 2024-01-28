@@ -4636,7 +4636,7 @@ if Second_Sea then
                 end)
             end
         end)
-   
+    end
 --------------------------------------------------------------------------------------------------------------------------------------------
 --Setting
 local SettingFarm = Tabs.Setting:AddSection("Farming")
@@ -6749,7 +6749,7 @@ Tabs.Shop:AddButton({
 	end
 })
 Tabs.Shop:AddButton({
-	Title = "Sanguine Art",
+	Title = "SanguineArt",
 	Description = "Mua Sanguine Art",
 	Callback = function()
 		game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("BuySanguineArt")
